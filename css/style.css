@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+	box-sizing: border-box;
+}
+.body-about {
+	background: #000 url('../img/bg.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.logo img {
+	width: 120px;
+}
+.navbar ul {
+	background: #231f20;
+	width: 120px;
+	text-align: center;
+	border-bottom-right-radius: 25px;
+	margin-top: -10px;
+}
+.navbar ul li {
+	list-style: none;
+}
+.navbar ul li a {
+	display: inline-block;
+	color: #ccc;
+	text-decoration: none;
+	padding: 5px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+.navbar ul li a:hover{
+	color: #019791;
+}
+.navbar ul .active a{
+   color: #019791;
+}
+.social a{
+   padding: 5px;
+   text-decoration: none;
+}
+.social a:hover i{
+	color: #019791;
+	transform: scale(1.05);
+}
+.social a i {
+	color: #777;
+	font-size: 1.2rem;
+	transition: transform 300ms;
+}
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+}
+.banner h5 {
+	font-size: 1.8rem;
+	color: #ccc;
+	font-family: 'Lobster', cursive;
+}
+.banner h1 {
+	font-size: 6rem;
+	color: #eee;
+	font-family: 'Staatliches', cursive;
+}
+.banner h1 span {
+	background: rgba(1, 151, 145, 0.5);
+}
+.banner p {
+	font-size: 1.5rem;
+	color: #ccc;
+	font-family: 'Lobster', cursive;
+}
+.about {
+	max-width: 400px;
+	width: 90%;
+	margin: 20vh auto;
+	background: rgba(1, 151, 145, 0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+.about h4 {
+	color: #eee;
+	font-size: 2rem;
+	font-family: 'Lobster', cursive;
+	padding: 20px 0;
+	text-align: center;
+}
+.about p {
+	color: #eee;
+	text-align: justify;
+	line-height: 1.7rem;
+}
+
+/*for small screens*/
+@media screen and (max-width: 460px){
+	.body-about {
+		background-size: 150%;
+		background-position: center;
+	}
+	.navbar {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+	}
+	.navbar ul {
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 0;
+	}
+	.banner h1 {
+		font-size: 4rem;
+	}
+}
+
+
+/*portfolio*/
+
+.body-portfolio {
+	background: #000;
+}
+.work-text h4 {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #ccc;
+	font-family: 'Staatliches', cursive;
+}
+.work-text p {
+	text-align: center;
+	color: #ccc;
+	padding: 10px;
+	font-family: 'Lobster', cursive;
+	font-size: 1.3rem;
+}
+
+.row {
+	width: 80%;
+	margin: 20px auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+.column {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+.column a {
+	display: block;
+	position: relative;
+}
+.column a:hover img{
+   transform: scale(0.95);
+}
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	transition: transform 500ms;
+}
+.column .title {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	justify-content: center;
+	align-items: flex-end;
+}
+.column .title h5 {
+	background: rgba(1, 151, 145, 0.5);
+	padding: 20px;
+	color: #eee;
+	border-radius: 5px;
+	width: 100%;
+}
+.column .title h5 span {
+	display: block;
+	padding-top: 5px;
+	color: #ccc;
+}
+.column a:hover .title {
+	display: flex;
+	transform: scale(0.95);
+}
+.pagination {
+	margin: 60px 0;
+	text-align: center;
+}
+.pagination a {
+	display: inline-block;
+	border: 2px solid #019791;
+	padding: 10px 15px;
+	color: #019791;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background 500ms, color 500ms;
+}
+.pagination a:hover {
+	background: #019791;
+	color: #fff;
+}
+
+@media screen and (max-width: 900px){
+   .column {
+   	flex: 50%;
+   	max-width: 50%;
+   }
+}
+
+@media screen and (max-width: 600px){
+   .column {
+   	flex: 100%;
+   	max-width: 100%;
+   }
+}
+
+
+/*CONTACT*/
+.body-contact {
+	background: #000;
+}
+.contact-text h4{
+	text-align: center;
+	font-size: 2.5rem;
+	color: #ccc;
+	font-family: 'Staatliches', cursive;
+}
+.contact-sec form {
+	max-width: 500px;
+	width: 90%;
+	margin: 30px auto;
+}
+.form-control {
+	margin: 15px 0;
+}
+.form-control label {
+	color: #aaa;
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+.form-control input {
+	display: block;
+	width: 100%;
+	background: #231f20;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	color: #ccc;
+}
+.form-control textarea {
+	display: block;
+	width: 100%;
+	background: #231f20;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	color: #ccc;
+	resize: none;
+}
+.btn-holder {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+.btn-holder button {
+	display: inline-block;
+	border: 2px solid #019791;
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 1.1rem;
+	cursor: pointer;
+	background: #019791;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background 500ms, color 500ms;
+	outline: none;
+}
+.btn-holder button:hover {
+	background: transparent;
+	color: #019791;
+}
